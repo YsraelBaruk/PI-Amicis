@@ -45,5 +45,3 @@
 3. **Criar Serviços:**
    - No contexto de uma ONG de cachorros abandonados, a criação de serviços pode ser mais limitada, mas ainda é possível oferecer serviços como programas de voluntariado, eventos de adoção, etc.
    - Mesmo conjunto de ações CRUD que o tutor e a empresa de serviços para cachorro, adaptado às necessidades específicas da ONG.
-
-Essas são algumas das possíveis ações que cada entidade pode realizar em relação ao login, adição de cachorros disponíveis para adoção e criação de serviços, utilizando o modelo CRUD como guia. Essas ações podem ser adaptadas e expandidas de acordo com os requisitos específicos do sistema de adoção de cachorros.
