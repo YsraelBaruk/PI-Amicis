@@ -1,5 +1,3 @@
-Vamos criar um conjunto de possíveis ações para cada entidade com base no modelo CRUD (Create, Read, Update e Delete), considerando os casos de uso de login, adição de cachorros disponíveis para adoção e criação de serviços:
-
 ## Tutor:
 
 1. **Login:**
