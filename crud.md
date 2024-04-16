@@ -13,6 +13,10 @@
    - Delete: Remover um cachorro da lista de adoção, por exemplo, se ele for adotado ou não estiver mais disponível.
 
 3. **Criar Serviços:**
+    3.1 Plano de serviços
+      - Create: Escolher um plano de Serviço;
+      - Delete: Deixar de pagar um plano de serviço;
+      - Read: Ver um plano de serviço;
    - Create: Registrar novos serviços oferecidos para tutores, como treinamento, cuidados de saúde, passeios, etc.
    - Read: Visualizar a lista de serviços disponíveis oferecidos pelas empresas de serviços para cachorro.
    - Update: Atualizar informações sobre os serviços, como custos, horários de disponibilidade, etc.
@@ -29,4 +33,8 @@
    - Update: Atualizar informações sobre os serviços existentes, como custos, horários de disponibilidade, descrições, etc.
    - Delete: Remover serviços que não são mais oferecidos ou relevantes.
 3. **Criar Serviços:**
-   - Mesmo conjunto de ações CRUD que o tutor.
+   3.1 Plano de serviços
+      - Create: Criar um plano de serviço;
+      - Update: Alterar um plano de serviço;
+      - Delete: Deletar um plano de serviço, porque tornou-se desnecessarel pela demanada;
+      - Read: Ver um plano de serviço;
