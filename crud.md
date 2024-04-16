@@ -33,6 +33,7 @@
    - Update: Atualizar informações sobre os serviços existentes, como custos, horários de disponibilidade, descrições, etc.
    - Delete: Remover serviços que não são mais oferecidos ou relevantes.
 3. **Criar Serviços:**
+
    3.1 Plano de serviços
       - Create: Criar um plano de serviço;
       - Update: Alterar um plano de serviço;
