@@ -36,12 +36,10 @@
 1. **Login:**
    - Mesmo conjunto de ações CRUD que o tutor.
 
-2. **Adicionar Cachorros Disponíveis para Adoção:**
-   - Create: Registrar informações sobre os cachorros resgatados disponíveis para adoção, incluindo detalhes sobre sua história, condição de saúde, temperamento, etc.
-   - Read: Visualizar a lista de cachorros disponíveis para adoção.
-   - Update: Atualizar informações sobre os cachorros disponíveis, como seu estado de saúde, comportamento, etc.
-   - Delete: Remover um cachorro da lista de adoção, por exemplo, se ele for adotado ou não estiver mais disponível.
+2. **Adicionar Cachorros Disponíveis para uma consulta:**
+   - Create: 
+   - Read: 
+   - Update: 
+   - Delete: 
 
-3. **Criar Serviços:**
-   - No contexto de uma ONG de cachorros abandonados, a criação de serviços pode ser mais limitada, mas ainda é possível oferecer serviços como programas de voluntariado, eventos de adoção, etc.
-   - Mesmo conjunto de ações CRUD que o tutor e a empresa de serviços para cachorro, adaptado às necessidades específicas da ONG.
+3. **Criar tipos de consultas:**
