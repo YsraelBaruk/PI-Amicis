@@ -30,16 +30,3 @@
    - Delete: Remover serviços que não são mais oferecidos ou relevantes.
 3. **Criar Serviços:**
    - Mesmo conjunto de ações CRUD que o tutor.
-
-## ONG de Cachorros Abandonados:
-
-1. **Login:**
-   - Mesmo conjunto de ações CRUD que o tutor.
-
-2. **Adicionar Cachorros Disponíveis para uma consulta:**
-   - Create: 
-   - Read: 
-   - Update: 
-   - Delete: 
-
-3. **Criar tipos de consultas:**
