@@ -39,3 +39,9 @@
       - Update: Alterar um plano de serviço;
       - Delete: Deletar um plano de serviço, porque tornou-se desnecessarel pela demanada;
       - Read: Ver um plano de serviço;
+
+  3.2 Serviços individuais
+     - Create: Criar um serviço individuais;
+     - Update: Atualizar serviços individuais
+     - Read: Ver Serviços individuais
+     - Delete: Deletar um serviço individual
