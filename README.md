@@ -1,3 +1,4 @@
+## Dependências do projeto
 - Linguagem principal PHP
 	- Versão do PHP ~8.1.0;
 - Nesse projeto utiliza-se a SDK do [Firebase Admin PHP SDK](https://github.com/kreait/firebase-php)
@@ -7,6 +8,7 @@
 - A framework Laravel
 	- Versão ^10 
 
+## Para inicializar o projeto
 Para instalar os pacotes:
 ```
 composer install
