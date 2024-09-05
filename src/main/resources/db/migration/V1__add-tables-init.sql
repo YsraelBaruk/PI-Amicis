@@ -1,44 +1,46 @@
-CREATE TABLE agente_adocao(
-    id bigint primary key not null auto_increment,
-    nome varchar(300) not null,
-    cpf varchar(300) not null
+CREATE TABLE IF NOT EXISTS  agente_adocao(
+    id bigint primary key NOT NULL AUTO_INCREMENT,
+    nome varchar(300) NOT NULL,
+    cpf varchar(11) NOT NULL
 );
 
-CREATE TABLE cachorro(
-    id bigint primary key not null auto_increment,
-    nome varchar(300) not null,
-    data_nascimento date,
+CREATE TABLE IF NOT EXISTS cachorro(
+    id bigint primary key NOT NULL AUTO_INCREMENT,
+    nome varchar(300) NOT NULL,
+    data_nascimento date NOT NULL,
     descricao varchar(500),
-    agente_adocao_id bigint not null,
-    tutor_id bigint not null
+    agente_adocao_id bigint NOT NULL,
+    tutor_id bigint NOT NULL
 );
 
-CREATE TABLE tutor(
-    id bigint primary key not null auto_increment,
-    nome varchar(300) not null,
-    cpf varchar(300) not null,
+CREATE TABLE IF NOT EXISTS tutor(
+    id bigint primary key NOT NULL AUTO_INCREMENT,
+    nome varchar(300) NOT NULL,
+    cpf varchar(11) NOT NULL,
+    telefone varchar(11) NOT NULL,
+    email varchar(150) NOT NULL,
     data_nascimento date
 );
 
-CREATE TABLE plano(
-    id bigint primary key not null auto_increment,
+CREATE TABLE IF NOT EXISTS  plano(
+    id bigint primary key NOT NULL AUTO_INCREMENT,
     descricao varchar(600),
-    preco double not null,
-    tutor_id bigint not null,
-    agente_servico_id not null
+    preco double NOT NULL,
+    tutor_id bigint NOT NULL,
+    agente_servico_id NOT NULL
 );
 
-CREATE TABLE servico(
-    id bigint primary key not null auto_increment,
-    nome varchar(150) not null,
+CREATE TABLE IF NOT EXISTS  servico(
+    id bigint primary key NOT NULL AUTO_INCREMENT,
+    nome varchar(150) NOT NULL,
     descricao varchar(300),
-    plano_id bigint not null
+    plano_id bigint NOT NULL
 );
 
-CREATE TABLE agente_servico(
-    id bigint primary key not null auto_increment,
-    nome varchar(300) not null,
-    cpf varchar(300) not null
+CREATE TABLE IF NOT EXISTS  agente_servico(
+    id bigint primary key NOT NULL AUTO_INCREMENT,
+    nome varchar(300) NOT NULL,
+    cpf varchar(11) NOT NULL
 );
 
 ALTER TABLE cachorro ADD CONSTRAINT fk_agente_adocao FOREIGN KEY (agente_adocao_id) REFERENCES agente_adocao(id);
