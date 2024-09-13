@@ -21,13 +21,13 @@ public class User implements UserDetails {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String email;
+    private String login;
 
-    private String senha;
+    private String password;
 
     public User(String email, String criptografarSenha) {
-        this.email = email;
-        this.senha = criptografarSenha;
+        this.login = email;
+        this.password = criptografarSenha;
     }
 
     @Override
@@ -37,12 +37,12 @@ public class User implements UserDetails {
 
     @Override
     public String getPassword() {
-        return this.senha;
+        return this.password;
     }
 
     @Override
     public String getUsername() {
-        return this.email;
+        return this.login;
     }
 
     @Override

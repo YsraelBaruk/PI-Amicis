@@ -26,9 +26,19 @@ public class SpringConfiguration {
         return http.csrf(c -> c.disable())
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(a -> {
-                    a.requestMatchers(HttpMethod.POST, "auth/login").permitAll();
-                    a.requestMatchers(HttpMethod.POST, "auth/register").permitAll();
-                    a.requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll();
+                    //Login e Registro
+                    a.requestMatchers(HttpMethod.POST, "/auth/login").permitAll();
+                    a.requestMatchers(HttpMethod.POST, "/auth/register").permitAll();
+                    //Para postar informações como cachorros, serviços e planos
+                    a.requestMatchers(HttpMethod.POST, "/dog-config").hasRole("ADMIN");
+                    a.requestMatchers(HttpMethod.POST, "/service-config").hasRole("ADMIN");
+                    a.requestMatchers(HttpMethod.POST, "/plan-config").hasRole("ADMIN");
+                    //Para alterar as informações como cachorro, serviços e plano
+                    a.requestMatchers(HttpMethod.PUT, "/dog-config").hasRole("ADMIN");
+                    a.requestMatchers(HttpMethod.PUT, "/service-config").hasRole("ADMIN");
+                    a.requestMatchers(HttpMethod.PUT, "/plan-config").hasRole("ADMIN");
+                    //documentação
+//                    a.requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll();
                     a.anyRequest().authenticated();
                 })
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
@@ -36,7 +46,7 @@ public class SpringConfiguration {
     }
 
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration){
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
     }
 

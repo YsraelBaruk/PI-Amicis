@@ -5,6 +5,6 @@ import com.example.demo.model.User;
 
 public class UserMapper {
     public static UserDTO map(User user) {
-        return new UserDTO(user.getEmail(), user.getSenha());
+        return new UserDTO(user.getLogin(), user.getPassword());
     }
 }

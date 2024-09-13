@@ -1,7 +1,7 @@
 package com.example.demo.dto;
 
 public record UserDTO(
-        String email,
-        String senha
+        String login,
+        String password
 ) {
 }
