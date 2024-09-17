@@ -17,13 +17,13 @@ public class CachorroController {
     @Autowired
     private CachorroRepository cachorroRepository;
 
-    @GetMapping("/meus")
+    @GetMapping
     public ResponseEntity getAllAnimais(){
         var animais = cachorroRepository.findAll().stream().map(CachorroMapper::map);
         return ResponseEntity.ok().body(animais);
     }
 
-    @PostMapping("/novo-pet")
+    @PostMapping
     @Transactional
     public ResponseEntity postNewDog(@RequestBody CachorroDTO dados, UriComponentsBuilder uriComponentsBuilder){
         var cachorro = new Cachorro(dados);

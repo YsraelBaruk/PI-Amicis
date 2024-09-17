@@ -23,12 +23,12 @@ public class Cachorro {
 
     private String raca;
 
-    private Boolean status;
+    private Boolean status_;
 
     public Cachorro(CachorroDTO dados) {
         this.nome = dados.nome();
         this.data_nasc = dados.data_nasc();
         this.raca = dados.raca();
-        this.status = true;
+        this.status_ = true;
     }
 }
