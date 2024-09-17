@@ -33,19 +33,18 @@ public class    AuthController {
         var tokenAuth = new UsernamePasswordAuthenticationToken(user.login(), user.password());
         var authentication = this.manager.authenticate(tokenAuth);
         var tokenJWT = tokenService.gerarToken((User) authentication.getPrincipal());
-        System.out.printf("\n\n\n\nUsuario: %s \n %s Senha Cript: \n\n\n\n", user.login(), user.password());
 
         return ResponseEntity.ok(new AuthDTO(tokenJWT));
     }
 
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody UserDTO user){
-//        if(this.userRepository.findByEmail(user.login()) != null) return ResponseEntity.badRequest().build();
         var loginAcess = this.userRepository.findByLogin(user.login());
         if(loginAcess != null) return ResponseEntity.badRequest().build();
         String criptografarSenha = new BCryptPasswordEncoder().encode(user.password());
         User newUser = new User(user.login(), criptografarSenha);
         this.userRepository.save(newUser);
+
         return ResponseEntity.ok().body(new UserDTO(newUser.getLogin(), newUser.getPassword()));
     }
 }

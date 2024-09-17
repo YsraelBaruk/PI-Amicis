@@ -15,7 +15,7 @@ public class WebConfiguration {
             public void addCorsMappings(CorsRegistry registry){
                 registry
                         .addMapping("/**")
-                        .allowedOrigins("*")
+                        .allowedOrigins("*") //domínio web do frontend
                         .allowedHeaders("Authorization", "Content-Type", "Accept")
                         .allowedMethods("GET", "POST", "PUT", "OPTIONS", "PATCH");
             }
