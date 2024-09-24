@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
-@RequestMapping("/animal")
+@RequestMapping("/pet")
 public class CachorroController {
 
     @Autowired
@@ -24,11 +24,10 @@ public class CachorroController {
     }
 
     @PostMapping
-    @Transactional
     public ResponseEntity postNewDog(@RequestBody CachorroDTO dados, UriComponentsBuilder uriComponentsBuilder){
         var cachorro = new Cachorro(dados);
         cachorroRepository.save(cachorro);
-        var uri = uriComponentsBuilder.path("/animal/{id}").buildAndExpand(cachorro.getId()).toUri();
+        var uri = uriComponentsBuilder.path("/pet/{id}").buildAndExpand(cachorro.getId()).toUri();
         return ResponseEntity.created(uri).body(CachorroMapper.map(cachorro));
     }
 }

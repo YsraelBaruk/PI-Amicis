@@ -13,11 +13,10 @@ public class WebConfiguration {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry){
-                registry
-                        .addMapping("/**")
+                registry.addMapping("/**")
                         .allowedOrigins("*") //domínio web do frontend
-                        .allowedHeaders("Authorization", "Content-Type", "Accept")
-                        .allowedMethods("GET", "POST", "PUT", "OPTIONS", "PATCH");
+                        .allowedHeaders("*")
+                        .allowedMethods("*");
             }
         };
     }
